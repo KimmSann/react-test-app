@@ -17,7 +17,8 @@ import { login } from './store/memberSlice';
 export const Context = createContext();
 
 // API 주소
-let host = 'http://localhost:8080';
+// let host = 'http://localhost:8080';
+let host = 'http://54.180.115.247:8080';
 // let host;
 // if (window.location.hostname === "localhost") {
 //   host = 'http://localhost:8080';

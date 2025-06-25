@@ -18,17 +18,11 @@ export const Context = createContext();
 
 // API 주소
 // let host = 'http://localhost:8080';
-let host = 'http://54.180.115.247:8080';
-// let host;
-// if (window.location.hostname === "localhost") {
-//   host = 'http://localhost:8080';
-// } else {
-//   host = '/api';
-// }
+// let host = 'http://54.180.115.247:8080';
 
-// 로그인 정보 유지하기
-// 브라우저를 다시 열었을 때 로컬 스토리지에 인증정보가 있는지 확인
-// 인증정보가 있으면 로그인 처리
+let host = null;
+console.log(window.location.hostname)
+
 const userStr = localStorage.getItem('user');
 const token = localStorage.getItem('token');
 if (userStr !== null) {

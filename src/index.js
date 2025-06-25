@@ -23,11 +23,14 @@ export const Context = createContext();
 let host = null;
 
 
-if(window.location.hostname === 'localost'){
+if(window.location.hostname === 'localhost'){
   host = 'http://localhost:8080'
 
 } else{
+  // API 주소 없이 중간 경로만 있음..
+  // 상대 경로를 사용하면 현재 사이트 주소가 자동으로 붙음
   host = '/api'
+
 }
 console.log('현재 api 주소:' , host)
 

@@ -21,7 +21,15 @@ export const Context = createContext();
 // let host = 'http://54.180.115.247:8080';
 
 let host = null;
-console.log(window.location.hostname)
+
+
+if(window.location.hostname === 'localost'){
+  host = 'http://localhost:8080'
+
+} else{
+  host = '/api'
+}
+console.log('현재 api 주소:' , host)
 
 const userStr = localStorage.getItem('user');
 const token = localStorage.getItem('token');
